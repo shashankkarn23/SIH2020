@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="12dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patrolling deatils"
+        android:textColor="#000000"
+        android:layout_marginLeft="15dp"
+        android:textSize="10dp"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You have a new beat information."
+        android:layout_below="@id/details"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/area_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area - "
+        android:textColor="#000000"
+        android:layout_below="@id/description"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/area_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="area name"
+        android:layout_below="@id/description"
+        android:layout_toRightOf="@id/area_description"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/date_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date - "
+        android:textColor="#000000"
+        android:layout_below="@id/area_description"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_below="@id/area_description"
+        android:layout_toRightOf="@id/area_description"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/time_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time - "
+        android:layout_below="@id/area_description"
+        android:layout_toRightOf="@id/date"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_below="@id/area_description"
+        android:layout_toRightOf="@id/time_description"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="see full description..."
+        android:layout_below="@id/date_description"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#000000"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

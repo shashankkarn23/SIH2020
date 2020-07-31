@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recycleViewAvailable"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardviewFirAvailable"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:layout_rowWeight="1"
+        android:layout_columnWeight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:stateListAnimator="@animator/lift_on_touch"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/CopIDAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:elegantTextHeight="true"
+                android:lines="2"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:text="Cop ID:- "
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+            <TextView
+                android:id="@+id/copNameAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:elegantTextHeight="true"
+                android:lines="2"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:text="Cop Name:- "
+                android:layout_below="@+id/CopIDAvailable"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+            <TextView
+                android:id="@+id/copPhoneAvailable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:elegantTextHeight="true"
+                android:lines="2"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:text="Phone Number:- "
+                android:layout_below="@+id/copNameAvailable"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:elegantTextHeight="true"
+                android:lines="2"
+                android:paddingTop="15dp"
+                android:singleLine="true"
+                android:text="Status:- "
+                android:layout_below="@+id/copPhoneAvailable"
+                android:layout_marginLeft="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

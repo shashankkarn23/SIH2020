@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FirFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorlayoutFir"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFCFC">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarFir"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/fir_hor"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbarFir"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="#4B34DB"
+                app:titleEnabled="true"
+                app:title="F.I.R"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"/>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollViewFir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_anchor="@+id/nestedScrollViewFir"
+            app:layout_anchorGravity="center"
+            android:layout_marginBottom="25dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/FirNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="Fir No:- "
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/nameSuspectFir"
+                    android:layout_below="@+id/FirNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_margin="4dp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:hint="Name of Suspect (Name/None)"
+                    android:textColorHint="#000000">
+                </TextView>
+
+
+                <TextView
+                    android:id="@+id/descOffenceFir"
+                    android:layout_below="@+id/nameSuspectFir"
+                    android:hint="Description Of Offence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/cityDistrictFir"
+                    android:layout_below="@+id/descOffenceFir"
+                    android:hint="City / District"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/policeStationFir"
+                    android:layout_below="@+id/cityDistrictFir"
+                    android:hint="Police Station"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+
+                <TextView
+                    android:id="@+id/CrimeDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/policeStationFir"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="46dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_bg_part2"
+                    android:elevation="13dp"
+                    android:textColorHint="#000000"
+                    android:text="Date of Crime"
+                    android:textColor="#000000" />
+
+
+                <TextView
+                    android:id="@+id/CrimeTimeFir"
+                    android:layout_below="@+id/CrimeDate"
+                    android:hint="Time of Crime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/TodayDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center"
+                    android:layout_below="@+id/CrimeTimeFir"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="46dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/round_bg_part2"
+                    android:elevation="13dp"
+                    android:text="Today's Date"
+                    android:textColorHint="#000000"
+                    android:textColor="#000000" />
+
+
+
+                <TextView
+                    android:id="@+id/PlaceCrimeFir"
+                    android:layout_below="@+id/TodayDate"
+                    android:hint="Place of Crime Jurisdiction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/AdharCardNoVictimFir"
+                    android:layout_below="@+id/PlaceCrimeFir"
+                    android:hint="Victim's Adhar Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/PhoneNoVictimFir"
+                    android:layout_below="@+id/AdharCardNoVictimFir"
+                    android:hint="Victim's Phone Number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <TextView
+                    android:id="@+id/VictimEmailFir"
+                    android:layout_below="@+id/PhoneNoVictimFir"
+                    android:hint="Victim's Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginRight="20dp"
+                    android:layout_margin="4dp"
+                    android:textColorHint="#000000"/>
+
+                <Button
+                    android:id="@+id/OK"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="25dp"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Back"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/round_bg"
+                    android:layout_below="@id/VictimEmailFir"
+                    android:clickable="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="105dp"
+                    android:layout_height="50dp"/>
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

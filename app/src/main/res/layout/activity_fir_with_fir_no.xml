@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirWithFirNo">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar"></include>
+
+    <EditText
+        android:layout_below="@+id/toolbar2"
+        android:id="@+id/VictimFirNo"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="150dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="phone"
+        android:textColor="#000000"
+        android:hint="Fir No"/>
+
+    <EditText
+        android:id="@+id/contactNoVictim"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/VictimFirNo"
+        android:layout_centerHorizontal="true"
+        android:hint="Victim Phone No."
+        android:textColor="#000000"
+        android:inputType="textEmailAddress"/>
+
+    <EditText
+        android:id="@+id/CopId"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/contactNoVictim"
+        android:layout_centerHorizontal="true"
+        android:hint="Cop Unique ID"
+        android:textColor="#000000"
+        android:inputType="textPassword"/>
+
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="300dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/CopId"
+        android:layout_centerHorizontal="true"
+        android:hint="Mobile No. of Cop"
+        android:textColor="#000000"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:layout_below="@+id/phone"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="46dp"
+        android:layout_marginBottom="10dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/round_bg"
+        android:text="Register"
+        android:textSize="18dp"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

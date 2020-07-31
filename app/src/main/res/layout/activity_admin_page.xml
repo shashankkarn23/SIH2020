@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FCFCFC"
+    tools:context=".AdminPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FCFCFC">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/u_shape">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="135dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="45dp"
+            android:weightSum="10">
+
+
+            <GridLayout
+                android:id="@+id/mainGrid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:padding="14dp"
+                android:rowCount="4">
+
+
+                <!-- Row 1 -->
+
+                <!-- ITEM 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_item1"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:stateListAnimator="@animator/lift_on_touch"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+
+                        <ImageView
+                            android:id="@+id/icon1Police"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="Police Patrolling"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 2 in Row 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_item2"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/icon2Verification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="Verification"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Row2 Item1-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_item3"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/icon3firFiles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="F.I.R. Files"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Row2 Item4-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fir_Assign"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/fir_Assign_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="Assgin F.I.R."
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--Row3 Item5-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/beatCV"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/beatIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="Beats"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!--Row3 Item6-->
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_item4"
+                    android:layout_width="56dp"
+                    android:layout_height="156dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="15dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_margin="10dp"
+                        android:orientation="vertical"
+                        android:weightSum="10">
+
+                        <ImageView
+                            android:id="@+id/icon4logOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="55dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="8" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:elegantTextHeight="true"
+                            android:lines="2"
+                            android:paddingTop="15dp"
+                            android:singleLine="true"
+                            android:text="Log Out"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/icon7" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+        </LinearLayout>
+
+        <include
+            android:id="@+id/toolbar2"
+            layout="@layout/toolbar"></include>
+
+
+    </RelativeLayout>
+</ScrollView>

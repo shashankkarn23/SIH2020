@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivityVerification">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar"></include>
+    <RelativeLayout
+        android:id="@+id/list_frag"
+        android:layout_below="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/row"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="65dp" >
+
+            <Spinner
+                android:id="@+id/spinner_type1"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:background="@drawable/recycle_list"
+                android:entries="@array/Verification_Type"
+                android:foregroundGravity="right"
+                android:elevation="8dp"
+                android:popupTheme="@style/Widget.AppCompat.Spinner"
+                android:layout_marginRight="20dp"/>
+
+            <Button
+                android:id="@+id/show"
+                android:background="@drawable/shadow"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:elevation="12dp"
+                android:layout_marginLeft="20dp"
+                android:text="Search" />
+        </TableRow>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/row"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/servant_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar2"
+        android:background="@color/colorAccent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/checkbox"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:id="@+id/Reg_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Reg. No."/>
+
+                <TextView
+                    android:id="@+id/Reg_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@id/imageView"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Reg_txt"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Name_txt"
+                    android:layout_below="@id/Reg_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Name"/>
+
+                <TextView
+                    android:id="@+id/Name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@id/imageView"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Name_txt"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Age_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/Name_edt"
+                    android:text="Age"/>
+
+                <TextView
+                    android:id="@+id/Age_edt"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/Age_txt"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/mob_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/Name_edt"
+                    android:layout_toRightOf="@+id/Age_edt"
+                    android:text="Mobile"/>
+
+                <TextView
+                    android:id="@+id/mob_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/mob_txt"
+                    android:layout_toRightOf="@id/Age_edt"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/F_Name_txt"
+                    android:layout_below="@id/mob_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Father Name"/>
+
+                <TextView
+                    android:id="@+id/F_Name_edt"
+                    android:layout_below="@id/F_Name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/M_Name_txt"
+                    android:layout_below="@id/F_Name_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Mother Name"/>
+
+                <TextView
+                    android:id="@+id/M_Name_edt"
+                    android:layout_below="@id/M_Name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/current_Address_txt"
+                    android:layout_below="@id/M_Name_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Current Address"/>
+
+                <TextView
+                    android:id="@+id/current_Address_edt"
+                    android:layout_below="@id/current_Address_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/permanent_Address_txt"
+                    android:layout_below="@id/current_Address_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Permanent Address"/>
+
+                <TextView
+                    android:id="@+id/permanent_Address_edt"
+                    android:layout_below="@id/permanent_Address_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Aadhar_Number_txt"
+                    android:layout_below="@id/permanent_Address_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Aadhar Number"/>
+
+                <TextView
+                    android:id="@+id/Aadhar_Number_edt"
+                    android:layout_below="@id/Aadhar_Number_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/O_Name_txt"
+                    android:layout_below="@id/Aadhar_Number_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Owner Name"/>
+
+                <TextView
+                    android:id="@+id/O_Name_edt"
+                    android:layout_below="@id/O_Name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/O_address_txt"
+                    android:layout_below="@id/O_Name_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Owner Address"/>
+
+                <TextView
+                    android:id="@+id/O_address_edt"
+                    android:layout_below="@id/O_address_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/O_mob_txt"
+                    android:layout_below="@id/O_address_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Owner Mobile"/>
+
+                <TextView
+                    android:id="@+id/O_mob_edt"
+                    android:layout_below="@id/O_mob_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/I_Name_txt"
+                    android:layout_below="@id/O_mob_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Introducer Name"/>
+
+                <TextView
+                    android:id="@+id/I_Name_edt"
+                    android:layout_below="@id/I_Name_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/I_address_txt"
+                    android:layout_below="@id/I_Name_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Introducer Address"/>
+
+                <TextView
+                    android:id="@+id/I_address_edt"
+                    android:layout_below="@id/I_address_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/I_mob_txt"
+                    android:layout_below="@id/I_address_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Introducer Mobile"/>
+
+                <TextView
+                    android:id="@+id/I_mob_edt"
+                    android:layout_below="@id/I_mob_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/date_txt"
+                    android:layout_below="@id/I_mob_edt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Date"/>
+
+                <TextView
+                    android:id="@+id/date_edt"
+                    android:layout_below="@id/date_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:text="gcvsytcv"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/check_previous_history_bt"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Check Record" />
+
+            <Button
+                android:id="@+id/verify_bt"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Verify" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verification_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/shadow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Crime_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/Crime_Name_edt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/shadow"
+                android:layout_below="@id/Crime_Name"
+                android:gravity="center_vertical"
+                android:text="gcvsytcv"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/Crimes_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Crime_Name_edt"
+                android:layout_marginTop="10dp"
+                android:text="Crimes" />
+
+            <TextView
+                android:id="@+id/Crimes_edt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/shadow"
+                android:layout_below="@id/Crimes_txt"
+                android:gravity="center_vertical"
+                android:text="gcvsytcv"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/Punishment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/Crimes_edt"
+                android:text="Punishment" />
+
+            <TextView
+                android:id="@+id/Punishment_edt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/shadow"
+                android:layout_below="@id/Punishment_txt"
+                android:gravity="center_vertical"
+                android:text="gcvsytcv"
+                android:textColor="#000000"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/not_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/shadow"
+            android:text="Not Verified" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tenant_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:background="@color/colorAccent">
+
+        <ScrollView
+            android:id="@+id/sv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/checkbox1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView_te"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/colorPrimary"
+                    app:srcCompat="@android:drawable/ic_menu_gallery" />
+
+                <TextView
+                    android:id="@+id/Reg_txt_te"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Reg. No."/>
+
+                <TextView
+                    android:id="@+id/Reg_edt_te"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@id/imageView_te"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Reg_txt_te"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Reg_edt_te"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Name"/>
+
+                <TextView
+                    android:id="@+id/Tenant_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_toLeftOf="@id/imageView_te"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_name"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/Tenant_name_edt"
+                    android:text="Age"/>
+
+                <TextView
+                    android:id="@+id/Tenant_age_edt"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/Tenant_age"
+                    android:textColor="#000000"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_mob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/Tenant_name_edt"
+                    android:layout_toRightOf="@+id/Tenant_age_edt"
+                    android:text="Mobile"/>
+
+                <TextView
+                    android:id="@+id/Tenant_mob_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/shadow"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/Tenant_mob"
+                    android:layout_toRightOf="@id/Tenant_age_edt"
+                    android:textColor="#000000"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_F_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_age_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Father name"/>
+
+                <TextView
+                    android:id="@+id/Tenant_F_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_F_name"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_permanent_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_F_name_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Permanent Address"/>
+
+                <TextView
+                    android:id="@+id/Tenant_permanent_address_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_permanent_address"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+
+                <TextView
+                    android:id="@+id/Tenant_occ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_permanent_address_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Occupation"/>
+
+                <TextView
+                    android:id="@+id/Tenant_occ_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_occ"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_office_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_occ_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Office/College Address"/>
+
+                <TextView
+                    android:id="@+id/Tenant_office_address_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_office_address"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_office_mob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_office_address_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Office/College Contact"/>
+
+                <TextView
+                    android:id="@+id/Tenant_office_mob_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_office_mob"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_Id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_office_mob_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="ID"/>
+
+                <TextView
+                    android:id="@+id/Tenant_Id_edt"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_Id"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Tenant_Id_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_office_mob_edt"
+                    android:layout_toRightOf="@id/Tenant_Id_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="ID no."/>
+
+                <TextView
+                    android:id="@+id/Tenant_Id_no_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Tenant_Id"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_toRightOf="@id/Tenant_Id_edt"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Landlord_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Tenant_Id_no_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Landlord name"/>
+
+                <TextView
+                    android:id="@+id/Landlord_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Landlord_name"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Landlord_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Landlord_name_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Landlord Address"/>
+
+                <TextView
+                    android:id="@+id/Landlord_address_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Landlord_address"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/Landlord_mob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_below="@id/Landlord_address_edt"
+                    android:layout_marginTop="10dp"
+                    android:text="Landlord Mobile"/>
+
+                <TextView
+                    android:id="@+id/Landlord_mob_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/shadow"
+                    android:layout_below="@id/Landlord_mob"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/checkbox1"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/check_previous_history_bt1"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:layout_alignParentLeft="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="Check Record" />
+
+            <Button
+                android:id="@+id/verify_bt1"
+                android:layout_width="500px"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shadow"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="5dp"
+                android:layout_marginRight="10dp"
+                android:text="Verify" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

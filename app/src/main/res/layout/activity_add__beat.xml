@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_Beat">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar"></include>
+
+    <RelativeLayout
+        android:id="@+id/main_list_layout"
+        android:layout_below="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/add_imageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:foreground="@drawable/add"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/circle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/add_beat"
+        android:layout_below="@id/toolbar2"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:background="@color/recycler_view"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/City_edt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:hint="City"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Area_edt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/City_edt"
+            android:textSize="15dp"
+            android:hint="Area"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Date_edt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_toLeftOf="@+id/Time_edt"
+            android:layout_below="@id/Area_edt"
+            android:textSize="15dp"
+            android:hint="Date"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Time_edt"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/Area_edt"
+            android:layout_alignParentRight="true"
+            android:textSize="15dp"
+            android:hint="Time"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Team_head_edt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Date_edt"
+            android:textSize="15dp"
+            android:hint="Team Head id"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Team_mem_edt_1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_head_edt"
+            android:textSize="15dp"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Team_mem_edt_2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_mem_edt_1"
+            android:textSize="15dp"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Team_mem_edt_3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:maxLines="1"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_mem_edt_2"
+            android:textSize="15dp"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/Create_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="Schedule Beat" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/toolbar2"
+        android:id="@+id/beat_report"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/recycler_view">
+
+        <TextView
+            android:id="@+id/City_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:hint="City"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Area_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/City_txt"
+            android:hint="Area"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Date_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_toLeftOf="@+id/Time_txt"
+            android:layout_below="@id/Area_txt"
+            android:hint="Date"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Time_txt"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="20dp"
+            android:layout_below="@id/Area_txt"
+            android:layout_alignParentRight="true"
+            android:hint="Time"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Team_head_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Date_txt"
+            android:hint="Team Head id"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Team_mem_txt_1"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_head_txt"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Team_mem_txt_2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_mem_txt_1"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/Team_mem_txt_3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_mem_txt_2"
+            android:hint="Team Member id"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/Report_txt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shadow"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@id/Team_mem_txt_3"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:gravity="start"
+            android:paddingVertical="5dp"
+            android:textSize="15dp"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:hint="type your report here (max 200 words)"
+            android:layout_above="@id/report_btn"
+            android:layout_marginBottom="10dp"/>
+
+        <Button
+            android:id="@+id/report_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text="Send Report" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorAccent"
+        android:visibility="invisible"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:layout_above="@id/mob_txt"
+            android:layout_marginBottom="10dp"
+            android:hint="name" />
+
+        <TextView
+            android:id="@+id/mob_txt"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/shadow"
+            android:paddingLeft="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginHorizontal="20dp"
+            android:hint="mobile"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

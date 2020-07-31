@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1031566176074",
+    "firebase_url": "https://ncrbnewadmin.firebaseio.com",
+    "project_id": "ncrbnewadmin",
+    "storage_bucket": "ncrbnewadmin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1031566176074:android:566756eb66cc56363d1bb3",
+        "android_client_info": {
+          "package_name": "com.shashank.admin.ncrb_new_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1031566176074-22hcu03k5ct45j5bje44qduorqcr8un8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shashank.admin.ncrb_new_admin",
+            "certificate_hash": "7698c7c9b89ce8198947dcac50bbd86a77bfedfd"
+          }
+        },
+        {
+          "client_id": "1031566176074-s3hv0q8cdfsn4bn557ofuj3fggvmmvnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAPZFfeL6CoZvKA1uK3EX0Jm46P3_Fwx0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1031566176074-s3hv0q8cdfsn4bn557ofuj3fggvmmvnt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

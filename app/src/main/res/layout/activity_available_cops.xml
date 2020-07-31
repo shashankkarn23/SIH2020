@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AvailableCops">
+
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/toolbar"></include>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/available_cops"
+        android:layout_below="@id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

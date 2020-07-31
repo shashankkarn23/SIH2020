@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AssignmentFir">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etUniqueID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="4dp"
+        android:hint="Password"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etUniqueIDEdit"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:inputType="numberPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:text="Submit"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/round_bg"
+        android:layout_below="@id/etUniqueID"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
